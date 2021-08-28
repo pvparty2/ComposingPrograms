@@ -1,0 +1,88 @@
+Chapter 2.3 - Sequences
+Sequence - ordered collection of values
+    a. Length - have finite length n. Empty sequence has length 0.
+    b. Element Selection - there is an element in a sequence for each index i, where 0<i<n.
+    c. Built-in examples: list, range
+
+Execution of _for_ statement:
+    1. Evaluate the <expression> after _in_; Results in iterable value
+    2. For each element in the iterable value:
+        a. Bind the element to the <name>
+        b. Execute the <suite>
+        c. <name> will be bound to the last element in iterable value
+
+Sequence unpacking - the process of binding multiple <name>s to multiple values in a nested iterable value
+
+List Comprehension
+    [<map expression> for <name> in <sequence expression> if <filter expression>]
+
+Aggregation - aggregate all values in a sequence to a single value
+
+Need to review 2.3.6 Trees
+
+Need to review Partitions
+
+Linked Lists - A form of data representation using nested lists
+
+
+
+Chapter 2.4 - Mutable Data
+
+Modular Programs - divide naturally into separate parts that can be maintained and developed separately
+
+Objects - combine data values with behaviour; Objects behave like the thing they represent
+All values in Python are Objects
+
+It is possible to change a list within a tuple.
+
+_nonlocal_ statement allows a function to reference a variable outside the local frame
+
+Propagating Constraints with functions - aka. you like to torture yourself (Hint: just use object oriented programming.)
+
+
+
+Chapter 2.5 - Object Oriented Programming
+
+Dot expressions - <expression> . <name>
+
+A function in a class becomes a bound method when an object is assigned to _self_ during instantiation.
+type(<class>.<function>)
+type(<instance>.<method>)
+
+Python convention - if an attribute (function or variable) name in a class starts with underscore, it should only be accessed by other attributes within the same class, not by users of the class.
+
+Class Attributes - attributes available to every object of the class (aka. static variables)
+
+To evaluate a dot expression:
+    1. Evaluate <expression> to the left of dot, which yields the object of the expression
+    2. <name> is matched against an instance attribute within that object
+    3. If an instance attribute is not found, <name> is matched against a class attribute
+
+Inheritance - a subclass inherits attributes from a super class
+
+Multiple Inheritance - inheriting attributes from multiple super classes
+Python chooses an attribute from multiple inheritance by using C3 Method Resolution Ordering
+This is the order of inheritance that Python will go through to look for the attribute name 
+
+
+
+Chapter 2.6 - Implementing Classes and Objects
+What I learned from this chapter: classes point to dictionaries which point to functions which point to dictionaries which point to functions...
+
+
+
+Chapter 2.7 - Object Abstraction
+
+Generic Function - function that accepts values of many different types
+    3 ways to implement generic functions:
+        1. Shared Interfaces
+        2. Type Dispatching
+        3. Type Coercion
+
+Special Functions are called by Python interpreter
+    Ex. print invokes __str__ method
+
+Multiple Representation of Data
+"In addition to the data-abstraction barriers that isolate representation from use, we need abstraction barriers that isolate different design choices from each other and permit different choices to coexist in a single program."
+
+If you want a class to have an attribute that is updated whenever another attribute changes, code the former attribute as a method with @property decorator.

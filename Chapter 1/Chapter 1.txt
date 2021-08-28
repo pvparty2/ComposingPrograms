@@ -1,0 +1,83 @@
+Chapter 1 - Building abstractions with Python
+
+
+Chapter 1.1 - Programming with Python
+URL - uniform resource locator - location of something on the internet
+
+
+Chapter 1.2 - Elements of Programming
+Every language has 3 mechanisms:
+	1. primitive expressions and statements
+	2. means of combining elements from simpler ones
+	3. means of abstracting complexity
+
+Programming has 2 elements:
+	1. Data
+	2. Functions
+
+Compound expression - combination of operator and operands
+	1. infix notation - numerals; Ex: 2 + 3
+	2. function notation - call expression; Ex: max(7, 9)
+		max() is the operator; The delimited list is the operand
+
+Assignment Operator is =
+	Assignment is the simplest form of abstraction
+
+Environment is the memory that the interpreter uses to store names, values, and bindings.
+	
+Pure functions - inputs produce outputs
+Non-pure functions - inputs produce outputs and side-effects
+	Ex: print() - always returns None; But side-effect is displaying the input
+
+
+Chapter 1.3 - Defining New Functions
+Environments have frames of references: global frame or local frames
+
+Built-in functions or user-defined functions have an intrinsic name and bound name
+	intrinsic name - the function name itself
+	bound name - the name binded to the function
+	In Python, you def bound names, but cannot see the intrinsic names
+
+The body (suite) of a function is executed only when it is called, not when it is defined.
+	A local frame is created when a function is called
+
+Name evaluation - a name evaluates to the value bound to that name in the earliest frame of the environment in which that name is found
+Model of Evaluation - the conceptual framework of environments, names, and functions
+
+3 Aspects of Functional Abstraction:
+	1. domain - set of arguments a function can take
+	2. range - set of values a function returns
+	3. intent - relationship between inputs and outputs, and any side-effects
+
+
+Chapter 1.4 - Designing Functions
+The first line of every function is a docstring that describes the job of a function. Subsequent lines in the docstring can describe the formal arguments and elaborate on the function's behaviour.
+
+help() - shows the function's docstring
+
+
+Chapter 1.5 - Control
+Control statements - control the flow of a program based on results of logical comparisons
+
+
+Chapter 1.6 - Higher Order Functions
+Higher Order Functions - functions that manipulate other functions; Functions that take other functions as arguments and/or return functions
+
+Lexical Scoping - a function defined within a parent function has access to the variables passed to or created within the parent environment
+
+Extended Environments - environment can be an arbitrarily long chain of frames that always concludes with the global frame
+
+Newton's Method - Find the arguments that make a function return 0; The function must be differentiable
+
+Currying - converting a single function that takes multiple arguments into multiple functions that each take a single argument
+
+Lambda Expressions - creating functions without naming them
+
+Function Decorators - functions that are executed before the main decorated function is executed
+
+
+Chapter 1.7 - Recursive Functions
+Recursive Function - a function that calls itself in the body of the function
+The body of a recursive function begins with a base case which is a conditional statement  addressing the simplest argument. Recursive calls are made after the base case is tested.
+
+Mutual Recursion - when 2 functions call each other
