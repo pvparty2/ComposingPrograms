@@ -86,3 +86,7 @@ Multiple Representation of Data
 "In addition to the data-abstraction barriers that isolate representation from use, we need abstraction barriers that isolate different design choices from each other and permit different choices to coexist in a single program."
 
 If you want a class to have an attribute that is updated whenever another attribute changes, code the former attribute as a method with @property decorator.
+
+Generic Functions - functions that apply to arguments of different types
+
+Type dispatching - inspect the arguments that a function receives, and dispatch the appropriate code to execute
