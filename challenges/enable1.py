@@ -123,7 +123,8 @@ def get_same_sums(words, n):
     return filter_keys(words, lambda x: x if words[x] == n else None)
 
 
-def len_difference(a, b):
+def diff_in_len(a, b):
+    '''Return the absolute value in the difference of length of 2 words.'''
     return abs(len(a) - len(b))
 
 
@@ -136,7 +137,7 @@ for _sum in set_of_sums:
         if word == same_sums[-1]:
             break
         for second_word in same_sums[i+1:]:
-            if len_difference(word, second_word) == DIFFERENCE:
+            if diff_in_len(word, second_word) == DIFFERENCE:
                 same_sums_w_difference.append((word, second_word))
 
 
