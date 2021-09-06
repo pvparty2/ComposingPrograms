@@ -142,3 +142,24 @@ for _sum in set_of_sums:
 
 
 
+# 5. Find a pair of words that have no letters in common, and that have the same letter sum.
+same_sums_no_same_letters = []  # each element will be a pair of 2 words
+
+
+def have_same_letters(a, b):
+    '''Returns true if two words a and b have at least one sharing letter.'''
+    for c in a:
+        if c in b:
+            return True
+    return False
+
+# Reusing code from above because this is just a challenge, 
+# and I think I have exhausted myself with use of functions, for now.
+for _sum in set_of_sums:
+    same_sums = get_same_sums(words_sums, _sum) # create a list of words with the same letter sum
+    for i, word in enumerate(same_sums):
+        if word == same_sums[-1]:
+            break
+        for second_word in same_sums[i+1:]:
+            if not have_same_letters(word, second_word):
+                same_sums_no_same_letters.append((word, second_word))
