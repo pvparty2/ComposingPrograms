@@ -92,7 +92,3 @@ Generic Functions - functions that apply to arguments of different types
 Type dispatching - inspect the arguments that a function receives, and dispatch the appropriate code to execute
 
 Coercion - morphing one data type into another, or 2 differents data types into a common third type 
-
-
-
-Chapter 2.9 - Recursive Objects

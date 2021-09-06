@@ -190,7 +190,16 @@ def analyze_tweet_sentiment(tweet):
     # You may change any of the lines below.
     average = make_sentiment(None)
     "*** YOUR CODE HERE ***"
-    return average
+    words = extract_words(tweet_string(tweet))
+    counter = 0
+    values = []
+    for w in words:
+        if has_sentiment(get_word_sentiment(w)):
+            counter += 1
+            values.append(sentiment_value(get_word_sentiment(w)))
+    if not values:
+        return None
+    return sum(values) / counter
 
 
 #################################
