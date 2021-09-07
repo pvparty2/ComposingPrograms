@@ -155,7 +155,7 @@ def have_same_letters(a, b):
 
 # Reusing code from above because this is just a challenge, 
 # and I think I have exhausted myself with use of functions, for now.
-for _sum in set_of_sums:
+for _sum in set_of_sums[186:]:
     same_sums = get_same_sums(words_sums, _sum) # create a list of words with the same letter sum
     for i, word in enumerate(same_sums):
         if word == same_sums[-1]:
